@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="722.0" prefWidth="699.0"
+  xmlns="http://javafx.com/javafx/10.0.1"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.explorewithme.SpringJavaFxAWSCognito.controller.MainAppController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0"
+      prefHeight="730.0" prefWidth="611.0">
+      <children>
+        <Label layoutX="10.0" layoutY="20.0" prefHeight="25.0"
+          prefWidth="133.0" text="AWS Access Key Id" />
+        <TextField fx:id="txtAwsAccessKeyId" layoutX="200.0"
+          layoutY="20.0" prefHeight="25.0" prefWidth="491.0" />
+        <Label layoutX="10.0" layoutY="60.0" prefHeight="25.0"
+          prefWidth="133.0" text="AWS Secret Access key" />
+        <TextField fx:id="txtAwsSecretAccessKey"
+          layoutX="200.0" layoutY="60.0" prefHeight="25.0"
+          prefWidth="491.0" />
+        <Label layoutX="10.0" layoutY="100.0" prefHeight="25.0"
+          prefWidth="133.0" text="AWS Region" />
+        <ChoiceBox fx:id="ddAwsRegion" layoutX="200.0"
+          layoutY="100.0" prefHeight="25.0" prefWidth="133.0" />
+        <Label layoutX="10.0" layoutY="140.0" prefHeight="25.0"
+          prefWidth="133.0" text="Identity Pool Id" />
+        <TextField fx:id="txtIdentityPoolId" layoutX="200.0"
+          layoutY="140.0" prefHeight="25.0" prefWidth="491.0" />
+        <Label layoutX="10.0" layoutY="180.0" prefHeight="25.0"
+          prefWidth="179.0" text="Developer Provider Name" />
+        <TextField fx:id="txtDeveloperProviderNameId"
+          layoutX="200.0" layoutY="180.0" prefHeight="25.0"
+          prefWidth="491.0" />
+        <Label layoutX="10.0" layoutY="220.0" prefHeight="25.0"
+          prefWidth="179.0" text="Username" />
+        <TextField fx:id="txtUsername" layoutX="200.0"
+          layoutY="220.0" prefHeight="25.0" prefWidth="491.0" />
+        <Label layoutX="434.0" layoutY="100.0" prefHeight="25.0"
+          prefWidth="124.0" text="Token Duration (hours)" />
+        <ChoiceBox fx:id="ddTokenDuration" layoutX="570.0"
+          layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+        <Button fx:id="btnGenerateToken" layoutX="240.0"
+          layoutY="260.0" mnemonicParsing="false"
+          onAction="#generateToken" prefHeight="25.0" prefWidth="179.0"
+          text="Generate Open ID Token" />
+
+        <Label layoutX="10.0" layoutY="300.0" prefHeight="25.0"
+          prefWidth="133.0" text="Token" />
+        <TextField fx:id="txtTempToken" layoutX="200.0"
+          layoutY="300.0" prefHeight="25.0" prefWidth="491.0" />
+        <Label layoutX="10.0" layoutY="340.0" prefHeight="25.0"
+          prefWidth="133.0" text="Identity Id" />
+        <TextField fx:id="txtTempIdentityId" layoutX="200.0"
+          layoutY="340.0" prefHeight="25.0" prefWidth="491.0" />
+        <Label layoutX="10.0" layoutY="380.0" prefHeight="17.0"
+          prefWidth="124.0" text="Cognito Identity Login" />
+        <TextField fx:id="txtCognitoIdentityLogin"
+          layoutX="200.0" layoutY="380.0" prefHeight="25.0"
+          prefWidth="204.0" />
+        <Button fx:id="btnGetCred" layoutX="240.0"
+          layoutY="420.0" mnemonicParsing="false"
+          onAction="#getCredentials" prefHeight="25.0" prefWidth="179.0"
+          text="Get Credentials For Identity ID" />
+        <Label layoutX="10.0" layoutY="460.0" prefHeight="25.0"
+          prefWidth="133.0" text="Access Key" />
+        <TextField fx:id="txtTempAccessKey" layoutX="200.0"
+          layoutY="460.0" prefHeight="25.0" prefWidth="491.0" />
+        <Label layoutX="10.0" layoutY="500.0" prefHeight="25.0"
+          prefWidth="179.0" text="Secret Key" />
+        <TextField fx:id="txtTempSecretKey" layoutX="200.0"
+          layoutY="500.0" prefHeight="25.0" prefWidth="491.0" />
+        <Label layoutX="10.0" layoutY="540.0" prefHeight="25.0"
+          prefWidth="179.0" text="Session Token" />
+        <TextField fx:id="txtTempSessionToken" layoutX="200.0"
+          layoutY="540.0" prefHeight="25.0" prefWidth="491.0" />
+        <!-- <Button fx:id="btnSendHttpRequest" layoutX="240.0" layoutY="583.0" 
+          mnemonicParsing="false" onAction="#sendHttpRequest" prefHeight="25.0" prefWidth="179.0" 
+          text="Send Http Request" /> <TextField fx:id="txtHttpRequestData" layoutX="10.0" 
+          layoutY="615.0" prefHeight="55.0" prefWidth="681.0" /> -->
+        <Button fx:id="btnReset" layoutX="240.0" layoutY="583.0"
+          mnemonicParsing="false" onAction="#reset" prefHeight="25.0"
+          prefWidth="179.0" text="Reset" />
+
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
